@@ -1,0 +1,126 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #333;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 32px;
+}
+@media(min-width: 1920px) {
+  body {
+    padding: 32px 256px;
+  }
+}
+.product-name {
+  background-color: #fff;
+  box-shadow: 0 3px 6px #00000030;
+  border-radius: 6px;
+  padding: 16px 32px;
+}
+.product-main {
+  display: flex;
+  margin-top: 32px;
+}
+.product-image {
+  max-width: 250px;
+  border: 1px solid #333;
+  padding: 16px;
+  box-shadow: 0 3px 6px #00000030;
+  border-radius: 6px;
+}
+.product-image img {
+  max-width: 100%;
+}
+.product-text {
+  margin-left: 16px;
+}
+.product-text p {
+  margin-top: 0;
+}
+.product-price {
+  font-size: 22px;
+  color: #1e9b32;
+  padding: 16px 0;
+}
+.product-description {
+  line-height: 24px;
+}
+.color-picker {
+  display: flex;
+  width: 250px;
+  justify-content: space-around;
+}
+.color-selector {
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  position: relative;
+}
+.color-selector::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 16px;
+  right: -16px;
+  width: 1px;
+  background-color: #333;
+}
+.color-selector:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 16px;
+  right: -16px;
+  width: 1px;
+  background-color: #333;
+}
+.color-selector:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 16px;
+  left: -16px;
+  width: 1px;
+  background-color: #333;
+}
+.color-button {
+  cursor: pointer;
+  border: 2px solid #333;
+  font-family: 'Ubuntu';
+  padding: 10px 10px;
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 8px;
+}
+.color-button:focus {
+  outline: 0;
+}
+.product-buy-button {
+  background-color: #1e9b32;
+  color: #fff;
+  border: none;
+  padding: 16px 32px;
+  font-size: 24px;
+  font-family: 'Ubuntu';
+  margin-top: 32px;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px #00000030;
+  cursor: pointer;
+}
+
+@media(max-width: 1024px) {
+  .product-name {
+    text-align: center;
+  }
+  .product-main {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .product-image {
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+  .color-picker {
+    margin: 0 auto;
+  }
+}

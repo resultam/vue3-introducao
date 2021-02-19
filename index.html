@@ -5,15 +5,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Documento</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-  <script src="https://unpkg.com/vue@next"></script>
 
-  <div>
-
+  <div id="app">
+    <header class="product-name">
+      <h1>{{produto.nome}}</h1>
+    </header>
+    <main class="product-main">
+      <div class="product-image">
+        <img :src="produto.imagem.src" :alt="produto.imagem.alt">
+        <small>Cor: {{produto.corSelecionada}}</small>
+      </div>
+      <div class="product-text">
+        <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque itaque, veniam incidunt non consequuntur beatae ullam eius illum aspernatur suscipit reprehenderit, molestias modi optio voluptatibus dignissimos. Fugiat repellendus commodi vitae!</p>
+        <p class="product-price">R$ 35,90</p>
+        <div class="color-picker">
+          <div v-for="cor in produto.cores" class="color-selector" @click="mudarCor(cor)">
+            <button class="color-button" :style="'background-color:' + cor.hex"></button>
+            <p>{{cor.nome}}</p>
+          </div>
+        </div>
+        <button class="product-buy-button" @click="comprar()">Comprar</button>
+      </div>
+    </main>
   </div>
   
-  <script src="./assets/app.js"></script>
+  <script src="./assets/main.js"></script>
+  <script>
+    const mountedApp = app.mount('#app')
+  </script>
 </body>
 </html>
