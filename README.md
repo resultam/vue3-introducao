@@ -1,10 +1,13 @@
 ﻿# vue3-introducao
  
- ## /css
- Arquivos CSS referente ao layout da página. Não utilizado durante o curso.
+ ## /assets/style.css
+ Arquivo CSS referente ao layout da página. Não utilizado durante o curso.
  
- ## /js
- Arquivo principal de códigos para o Vue.
+ ## /assets/app.js
+ Arquivo principal do app em vue
+
+ ## /assets/img
+ Arquivos de imagens estáticas para uso no website
 
 ## index.html
 Importação do CDN do vue e código principal da página.
